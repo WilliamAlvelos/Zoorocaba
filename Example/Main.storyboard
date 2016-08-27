@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FY6-Wu-8Kb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Animacao Inicial View Controller-->
+        <scene sceneID="Ngi-kW-Mro">
+            <objects>
+                <viewController id="FY6-Wu-8Kb" customClass="AnimacaoInicialViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BrI-Bw-gW0"/>
+                        <viewControllerLayoutGuide type="bottom" id="qXH-SR-rev"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fPU-y9-FQh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ex-wU-YuP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="0Ex-wU-YuP" id="zWr-08-PBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yho-Oy-feh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1943.5" y="531.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xQ7-xq-8MM">
+            <objects>
+                <navigationController storyboardIdentifier="iniciaApp" id="F2N-gk-cvc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ckr-r7-nag">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gM2-wA-52C" kind="relationship" relationship="rootViewController" id="N4a-KW-xGT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkS-ju-wX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1267" y="520"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="lGD-Pw-k4G">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="23Q-dH-NEv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xQJ-w0-Zc0"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ro7-Mb-Muv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202" y="-566"/>
+        </scene>
+        <!--Mapa View Controller-->
+        <scene sceneID="Lzk-f3-lhc">
+            <objects>
+                <viewController id="gM2-wA-52C" customClass="MapaViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nVn-DD-gMC"/>
+                        <viewControllerLayoutGuide type="bottom" id="7dG-GZ-zr7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OAJ-sh-YiG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu_inicial" translatesAutoresizingMaskIntoConstraints="NO" id="ifB-0U-01P">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meF-DO-hyv">
+                                <rect key="frame" x="94" y="503" width="187" height="40"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cartas">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nYB-gC-Cnj" kind="show" id="HDO-Un-4zQ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kal-nl-CTQ">
+                                <rect key="frame" x="36" y="130" width="112" height="30"/>
+                                <state key="normal" title="Liberar Avestruz"/>
+                                <connections>
+                                    <action selector="addAvestruz:" destination="gM2-wA-52C" eventType="touchUpInside" id="qlx-XA-IOc"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3e6-CZ-i9B">
+                                <rect key="frame" x="218" y="130" width="124" height="30"/>
+                                <state key="normal" title="Remover Aveztruz"/>
+                                <connections>
+                                    <action selector="removeAvestruz:" destination="gM2-wA-52C" eventType="touchUpInside" id="5B4-dP-SxX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8G-54-saR">
+                                <rect key="frame" x="94" y="438" width="187" height="42"/>
+                                <state key="normal" title=" ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mapaAction:" destination="gM2-wA-52C" eventType="touchUpInside" id="Ys3-Ux-UKq"/>
+                                    <segue destination="gc5-fo-yXh" kind="show" id="vZu-2C-BMp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKD-iV-Em8">
+                                <rect key="frame" x="94" y="564" width="187" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <connections>
+                                    <segue destination="pbm-gD-2Ui" kind="show" id="EvT-Xh-aap"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7E-Uo-gpt">
+                                <rect key="frame" x="145" y="269" width="98" height="30"/>
+                                <state key="normal" title="Teste Scanner"/>
+                                <connections>
+                                    <action selector="scanner:" destination="gM2-wA-52C" eventType="touchUpInside" id="EN4-jx-ijs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qss-Ro-hRx"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FTD-Cp-hPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-573.5" y="519.5"/>
+        </scene>
+        <!--Camera Default View Controller-->
+        <scene sceneID="eZs-5h-v4G">
+            <objects>
+                <viewController id="pbm-gD-2Ui" customClass="CameraDefaultViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lpg-gO-HSw"/>
+                        <viewControllerLayoutGuide type="bottom" id="D8f-jB-Eng"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0k4-3a-gaY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu_camera" translatesAutoresizingMaskIntoConstraints="NO" id="PUu-nt-rI6" customClass="menu_camera">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alV-gy-n3S">
+                                <rect key="frame" x="67" y="102" width="240" height="240"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7x-cf-8YK">
+                                <rect key="frame" x="93" y="430" width="192" height="35"/>
+                                <connections>
+                                    <action selector="useCameraRoll:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="2oJ-Nq-K9i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSz-p6-our">
+                                <rect key="frame" x="92" y="484" width="195" height="41"/>
+                                <connections>
+                                    <action selector="useCamera:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="5cT-Ah-BHH"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rr-zS-bHf">
+                                <rect key="frame" x="10" y="64" width="352" height="440"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yJ-kS-kro" userLabel="Button7">
+                                        <rect key="frame" x="20" y="39" width="60" height="60"/>
+                                        <state key="normal" image="sticker_leao1"/>
+                                        <connections>
+                                            <action selector="animal7:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="iIb-eV-B3T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQM-gO-gEc" userLabel="Button2">
+                                        <rect key="frame" x="258" y="333" width="60" height="60"/>
+                                        <state key="normal" image="sticker_macaco3"/>
+                                        <connections>
+                                            <action selector="animal2:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="ukR-jH-jEW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biz-sf-TF9" userLabel="Button9">
+                                        <rect key="frame" x="258" y="190" width="60" height="60"/>
+                                        <state key="normal" image="sticker_avestruz3"/>
+                                        <connections>
+                                            <action selector="animal9:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="rZS-PZ-TKu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8u-Yj-6Sy" userLabel="Button5">
+                                        <rect key="frame" x="258" y="39" width="60" height="60"/>
+                                        <state key="normal" image="sticker_leao2"/>
+                                        <connections>
+                                            <action selector="animal5:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="vNV-xY-Xdn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqY-YK-aEc" userLabel="Button3">
+                                        <rect key="frame" x="139" y="39" width="60" height="60"/>
+                                        <state key="normal" image="sticker_leao3"/>
+                                        <connections>
+                                            <action selector="animal3:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="ar1-k6-hGf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmz-T2-1LQ" userLabel="Button1">
+                                        <rect key="frame" x="139" y="333" width="60" height="60"/>
+                                        <state key="normal" image="sticker_macaco2"/>
+                                        <connections>
+                                            <action selector="animal1:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="DAG-3i-aZ0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgE-P7-6jF" userLabel="Button4">
+                                        <rect key="frame" x="20" y="333" width="60" height="60"/>
+                                        <state key="normal" image="sticker_macaco1"/>
+                                        <connections>
+                                            <action selector="animal4:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="Kbx-B8-Sa5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdm-VY-212" userLabel="Button6">
+                                        <rect key="frame" x="20" y="190" width="60" height="60"/>
+                                        <state key="normal" image="sticker_avestruz1"/>
+                                        <connections>
+                                            <action selector="animal6:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="Q1y-5N-px1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6z-mu-s2N" userLabel="Button8">
+                                        <rect key="frame" x="139" y="190" width="60" height="60"/>
+                                        <state key="normal" image="sticker_avestruz2"/>
+                                        <connections>
+                                            <action selector="animal8:" destination="pbm-gD-2Ui" eventType="touchUpInside" id="oJG-ec-87c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="animaisStickerView" destination="7rr-zS-bHf" id="UIk-7L-WH5"/>
+                        <outlet property="btn1" destination="e7x-cf-8YK" id="TUw-Fl-Gkb"/>
+                        <outlet property="btn2" destination="nSz-p6-our" id="2fh-xu-U3u"/>
+                        <outlet property="imageView" destination="PUu-nt-rI6" id="WnE-wD-eYb"/>
+                        <outlet property="stickerView" destination="alV-gy-n3S" id="mV9-FH-Ktg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4WX-eP-XDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-870.5" y="1289.5"/>
+        </scene>
+        <!--Selecionar Animal View Controller-->
+        <scene sceneID="fkV-Gh-jCs">
+            <objects>
+                <viewController storyboardIdentifier="SelecionarAnimalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TKl-gl-AOn" customClass="SelecionarAnimalViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vhn-x9-V3A"/>
+                        <viewControllerLayoutGuide type="bottom" id="WKX-xR-EGC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oux-86-b25">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TI4-Vn-f9j">
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAPA_ZOO_final" translatesAutoresizingMaskIntoConstraints="NO" id="Jex-sM-lEV">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="380"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Jex-sM-lEV" firstAttribute="leading" secondItem="TI4-Vn-f9j" secondAttribute="leading" id="O4q-2g-WuG"/>
+                                    <constraint firstItem="Jex-sM-lEV" firstAttribute="top" secondItem="TI4-Vn-f9j" secondAttribute="top" id="TSQ-ni-nrh"/>
+                                    <constraint firstItem="Jex-sM-lEV" firstAttribute="centerY" secondItem="TI4-Vn-f9j" secondAttribute="centerY" constant="-143.5" id="doe-dT-fgi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jex-sM-lEV" secondAttribute="bottom" constant="287" id="gHf-pP-Svx"/>
+                                    <constraint firstItem="Jex-sM-lEV" firstAttribute="centerX" secondItem="TI4-Vn-f9j" secondAttribute="centerX" constant="-28" id="jPY-qt-0wf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jex-sM-lEV" secondAttribute="trailing" constant="56" id="uNq-aF-GNa"/>
+                                </constraints>
+                            </scrollView>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AQB-PC-pr4">
+                                <rect key="frame" x="36" y="100" width="22" height="51"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TI4-Vn-f9j" secondAttribute="trailing" constant="-1" id="U7i-Fr-HxO"/>
+                            <constraint firstItem="TI4-Vn-f9j" firstAttribute="centerY" secondItem="Oux-86-b25" secondAttribute="centerY" id="Zpw-FX-u2M"/>
+                            <constraint firstItem="TI4-Vn-f9j" firstAttribute="leading" secondItem="Oux-86-b25" secondAttribute="leading" id="gHs-1x-6wh"/>
+                            <constraint firstItem="WKX-xR-EGC" firstAttribute="top" secondItem="TI4-Vn-f9j" secondAttribute="bottom" id="krM-Rd-93a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="O8S-Tt-2ss">
+                        <barButtonItem key="backBarButtonItem" title="back" id="rSu-EQ-1Xx"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="image" destination="Jex-sM-lEV" id="Itz-gp-TRZ"/>
+                        <outlet property="mapView" destination="AQB-PC-pr4" id="uJK-5J-03K"/>
+                        <outlet property="scrollView" destination="TI4-Vn-f9j" id="PY9-pq-JNj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0J-ja-GRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302.5" y="-775.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UdO-Su-ddn">
+            <objects>
+                <viewController id="nYB-gC-Cnj" customClass="ViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d48-rI-jRd"/>
+                        <viewControllerLayoutGuide type="bottom" id="gvB-cp-Jdh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RXd-N0-Gmb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7wA-fg-VDc"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf9-oV-0ya" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.5" y="525.5"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="pEN-FQ-nzb">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="vAW-jl-vir" customClass="PageContentViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Pw-jK-PgD"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Jw-0z-diQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NVq-5D-jpK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4q-Gi-yrt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hFj-Uo-6e4">
+                                        <rect key="frame" x="116" y="538" width="143" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="143" id="4kZ-VX-SEA"/>
+                                        </constraints>
+                                    </pageControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hFj-Uo-6e4" secondAttribute="trailing" constant="116" id="6dE-39-5U8"/>
+                                    <constraint firstItem="hFj-Uo-6e4" firstAttribute="top" secondItem="f4q-Gi-yrt" secondAttribute="top" constant="538" id="Vtj-hM-OuV"/>
+                                    <constraint firstAttribute="bottom" secondItem="hFj-Uo-6e4" secondAttribute="bottom" constant="92" id="bir-AC-CM6"/>
+                                    <constraint firstItem="hFj-Uo-6e4" firstAttribute="centerX" secondItem="f4q-Gi-yrt" secondAttribute="centerX" id="mXK-Yf-sUM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f4q-Gi-yrt" firstAttribute="top" secondItem="NVq-5D-jpK" secondAttribute="top" id="RbH-sS-4Bw"/>
+                            <constraint firstAttribute="trailing" secondItem="f4q-Gi-yrt" secondAttribute="trailing" id="S9j-nE-2Yx"/>
+                            <constraint firstItem="f4q-Gi-yrt" firstAttribute="leading" secondItem="NVq-5D-jpK" secondAttribute="leading" id="W5A-lk-NcG"/>
+                            <constraint firstItem="f4q-Gi-yrt" firstAttribute="bottom" secondItem="6Jw-0z-diQ" secondAttribute="top" id="Zw5-yF-UGR"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pageControl" destination="hFj-Uo-6e4" id="0Tq-ut-MXX"/>
+                        <outlet property="scroll" destination="f4q-Gi-yrt" id="1wW-ER-rjE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2K-Zh-myC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.5" y="-42.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9SL-rA-S5T">
+            <objects>
+                <viewController storyboardIdentifier="t2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aSX-hN-DYP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rfP-hZ-mUS"/>
+                        <viewControllerLayoutGuide type="bottom" id="quV-Pg-0pD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tcb-Jc-0LS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial2" translatesAutoresizingMaskIntoConstraints="NO" id="iwE-DN-Rxy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCP-Bw-MQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946.5" y="-1980.5"/>
+        </scene>
+        <!--Animal View Controller-->
+        <scene sceneID="Pzm-tV-ndY">
+            <objects>
+                <viewController storyboardIdentifier="Animal" id="2Jw-WX-fQb" customClass="AnimalViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iid-BH-VxX"/>
+                        <viewControllerLayoutGuide type="bottom" id="gc3-5n-bR8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DI4-yt-9P8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jeg-kJ-BPU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="614"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imagem" destination="jeg-kJ-BPU" id="HQI-a7-dtF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeA-QC-h9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258.5" y="-42.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uhj-ne-qKU">
+            <objects>
+                <viewController id="ulL-Fr-JZV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HPp-Hm-MaR"/>
+                        <viewControllerLayoutGuide type="bottom" id="vf7-0p-k97"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UAY-EE-ypa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qc3-jf-nbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="662"/>
+        </scene>
+        <!--Animal Table View Controller-->
+        <scene sceneID="GNO-iE-U62">
+            <objects>
+                <tableViewController storyboardIdentifier="AnimalTableViewController" id="Cp7-1d-x62" customClass="AnimalTableViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Qn-If-jA0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7In-wT-otP">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7In-wT-otP" id="OQ1-5t-Rtn">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cp7-1d-x62" id="bQG-ca-RrO"/>
+                            <outlet property="delegate" destination="Cp7-1d-x62" id="2Bv-xs-315"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="cgX-Zc-I1j"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Rn-Gp-TcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="1330"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s0P-1t-9ni">
+            <objects>
+                <navigationController id="FOs-dn-ZFZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nry-6r-p6r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Cp7-1d-x62" kind="relationship" relationship="rootViewController" id="eBa-FE-nSd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uip-Fp-9BA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="1339"/>
+        </scene>
+        <!--Sticker View Controller-->
+        <scene sceneID="uo3-0r-u9q">
+            <objects>
+                <viewController id="h3x-KM-jbs" customClass="stickerViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cc5-Q0-PdG"/>
+                        <viewControllerLayoutGuide type="bottom" id="pnC-aM-rsA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dzv-QO-Wg9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydh-g7-upd">
+                                <rect key="frame" x="122" y="364" width="91" height="130"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showCamera:" destination="h3x-KM-jbs" eventType="touchUpInside" id="zfD-xM-3CC"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-Gk-sVD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leao" translatesAutoresizingMaskIntoConstraints="NO" id="ULh-Re-m1d">
+                                <rect key="frame" x="63" y="102" width="238" height="189"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="ULh-Re-m1d" id="aRT-Y0-CCP"/>
+                        <outlet property="resultView" destination="C2a-Gk-sVD" id="Lo6-1E-VdS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQW-qd-jcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-555.5" y="-199.5"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="9os-TQ-9mT">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="8gX-22-oRp" customClass="CameraViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="omo-qM-JNc"/>
+                        <viewControllerLayoutGuide type="bottom" id="MA3-Yv-VG6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0rM-uh-i92">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf2-ud-o7H">
+                                <rect key="frame" x="304" y="31" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.035294117649999998" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yf2-ud-o7H" secondAttribute="height" multiplier="1:1" id="0zY-CW-XBO"/>
+                                </constraints>
+                                <state key="normal" image="icon_pic_selfie"/>
+                                <connections>
+                                    <action selector="cameraHandler:" destination="8gX-22-oRp" eventType="touchUpInside" id="grV-ut-Vm7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvb-Pc-QpQ">
+                                <rect key="frame" x="11" y="31" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.035294117649999998" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Uvb-Pc-QpQ" secondAttribute="height" multiplier="1:1" id="2l3-6X-f1d"/>
+                                </constraints>
+                                <state key="normal" image="icon_enable_flash"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2l3-6X-f1d"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="flashHandler:" destination="8gX-22-oRp" eventType="touchUpInside" id="2B5-Mf-hvy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9L6-Xh-Lla">
+                                <rect key="frame" x="11" y="577" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.035294117649999998" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9L6-Xh-Lla" secondAttribute="height" multiplier="1:1" id="N31-1D-m21"/>
+                                </constraints>
+                                <state key="normal" image="icon_exit_camera"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="N31-1D-m21"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="closeHandler:" destination="8gX-22-oRp" eventType="touchUpInside" id="8it-9a-kj6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tv-lW-DQu">
+                                <rect key="frame" x="304" y="577" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.035294117649999998" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7tv-lW-DQu" secondAttribute="height" multiplier="1:1" id="OE5-HB-4DZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OE5-HB-4DZ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="picHandler:" destination="8gX-22-oRp" eventType="touchUpInside" id="WI6-me-zry"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-mw-JWF">
+                                <rect key="frame" x="142" y="561" width="91" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9uS-mw-JWF" secondAttribute="height" multiplier="1:1" id="5uT-Lm-bUg"/>
+                                </constraints>
+                                <state key="normal" image="icon_camera"/>
+                                <connections>
+                                    <action selector="takeHandler:" destination="8gX-22-oRp" eventType="touchUpInside" id="IM1-Ac-ZkH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uvb-Pc-QpQ" firstAttribute="width" secondItem="Uvb-Pc-QpQ" secondAttribute="height" multiplier="1:1" id="473-E0-Jqu"/>
+                            <constraint firstItem="9L6-Xh-Lla" firstAttribute="width" secondItem="Uvb-Pc-QpQ" secondAttribute="width" id="4Ow-Ng-TOz"/>
+                            <constraint firstItem="9L6-Xh-Lla" firstAttribute="centerX" secondItem="Uvb-Pc-QpQ" secondAttribute="centerX" id="62Z-i6-Oc4"/>
+                            <constraint firstItem="7tv-lW-DQu" firstAttribute="width" secondItem="9L6-Xh-Lla" secondAttribute="width" id="Aaj-Vw-Cz2"/>
+                            <constraint firstItem="Uvb-Pc-QpQ" firstAttribute="height" secondItem="yf2-ud-o7H" secondAttribute="height" id="AvL-jN-hF7"/>
+                            <constraint firstItem="9uS-mw-JWF" firstAttribute="centerY" secondItem="7tv-lW-DQu" secondAttribute="centerY" id="Cht-fO-0dH"/>
+                            <constraint firstItem="9uS-mw-JWF" firstAttribute="centerX" secondItem="0rM-uh-i92" secondAttribute="centerX" id="Dc4-jv-9Na"/>
+                            <constraint firstItem="yf2-ud-o7H" firstAttribute="height" secondItem="0rM-uh-i92" secondAttribute="height" multiplier="0.09" id="ElS-LA-Eqa"/>
+                            <constraint firstItem="yf2-ud-o7H" firstAttribute="top" secondItem="omo-qM-JNc" secondAttribute="bottom" constant="11" id="Hbj-n5-oUY"/>
+                            <constraint firstItem="Uvb-Pc-QpQ" firstAttribute="leading" secondItem="0rM-uh-i92" secondAttribute="leadingMargin" constant="-5" id="N0k-bK-07B"/>
+                            <constraint firstItem="7tv-lW-DQu" firstAttribute="centerY" secondItem="9L6-Xh-Lla" secondAttribute="centerY" id="XoN-ra-QSz"/>
+                            <constraint firstItem="9L6-Xh-Lla" firstAttribute="width" secondItem="9L6-Xh-Lla" secondAttribute="height" multiplier="1:1" id="byK-xp-wAZ"/>
+                            <constraint firstItem="7tv-lW-DQu" firstAttribute="centerX" secondItem="yf2-ud-o7H" secondAttribute="centerX" id="fD6-uZ-CgC"/>
+                            <constraint firstItem="7tv-lW-DQu" firstAttribute="width" secondItem="7tv-lW-DQu" secondAttribute="height" multiplier="1:1" id="g9o-8i-PAN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yf2-ud-o7H" secondAttribute="trailing" constant="-5" id="gbg-LM-gsx"/>
+                            <constraint firstItem="7tv-lW-DQu" firstAttribute="width" secondItem="7tv-lW-DQu" secondAttribute="height" multiplier="1:1" id="kYC-cy-yl4"/>
+                            <constraint firstItem="Uvb-Pc-QpQ" firstAttribute="centerY" secondItem="yf2-ud-o7H" secondAttribute="centerY" id="kll-DH-KHS"/>
+                            <constraint firstItem="MA3-Yv-VG6" firstAttribute="top" secondItem="9L6-Xh-Lla" secondAttribute="bottom" constant="30" id="sE6-f0-coN"/>
+                            <constraint firstItem="Uvb-Pc-QpQ" firstAttribute="width" secondItem="yf2-ud-o7H" secondAttribute="width" id="sPw-aL-hfu"/>
+                            <constraint firstItem="9uS-mw-JWF" firstAttribute="height" secondItem="0rM-uh-i92" secondAttribute="height" multiplier="0.135" id="u4O-hy-cKl"/>
+                            <constraint firstItem="9L6-Xh-Lla" firstAttribute="height" secondItem="Uvb-Pc-QpQ" secondAttribute="height" id="uAT-Eb-YxT"/>
+                            <constraint firstItem="7tv-lW-DQu" firstAttribute="height" secondItem="9L6-Xh-Lla" secondAttribute="height" id="wPG-zU-yjY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sPw-aL-hfu"/>
+                                <exclude reference="uAT-Eb-YxT"/>
+                                <exclude reference="g9o-8i-PAN"/>
+                                <exclude reference="kYC-cy-yl4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="yf2-ud-o7H" id="DkR-Y5-imd"/>
+                        <outlet property="closeButton" destination="9L6-Xh-Lla" id="s4C-oQ-oJz"/>
+                        <outlet property="flashButton" destination="Uvb-Pc-QpQ" id="2WN-hs-VtH"/>
+                        <outlet property="pictureButton" destination="7tv-lW-DQu" id="GDn-oa-bXD"/>
+                        <outlet property="takeButton" destination="9uS-mw-JWF" id="zR1-Tc-tPw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJz-Y6-QE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1075.5" y="-298.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2aO-YU-qRt">
+            <objects>
+                <viewController storyboardIdentifier="t4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2dV-0l-dTX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I8q-j4-76z"/>
+                        <viewControllerLayoutGuide type="bottom" id="G7m-0G-gSw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hbT-63-O2F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial4" translatesAutoresizingMaskIntoConstraints="NO" id="Dlb-14-hwZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFo-sL-HOW">
+                                <rect key="frame" x="101" y="386" width="172" height="83"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" red="0.078431372549019607" green="0.62352941176470589" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="OK ENTENDI"/>
+                                <connections>
+                                    <segue destination="TKl-gl-AOn" kind="show" id="Jc6-y4-cEh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omZ-sf-Gz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834.5" y="-916.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qxv-JM-L7S">
+            <objects>
+                <viewController storyboardIdentifier="t1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qGu-pk-6Cv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cVr-za-RGK"/>
+                        <viewControllerLayoutGuide type="bottom" id="NoK-eA-jQG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b8m-lY-BFk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial1" translatesAutoresizingMaskIntoConstraints="NO" id="5oJ-1E-pXL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQZ-9b-erm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498.5" y="-1980.5"/>
+        </scene>
+        <!--Tutorial Page View Controller-->
+        <scene sceneID="XOw-rU-NVR">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="gc5-fo-yXh" customClass="TutorialPageViewController" customModule="Zoorocaba" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3e-jL-Y9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.5" y="1305.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZuJ-36-S38">
+            <objects>
+                <viewController storyboardIdentifier="t3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XJt-YC-xUF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XkL-XX-bq0"/>
+                        <viewControllerLayoutGuide type="bottom" id="gzb-2L-eTN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fIZ-Yt-147">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial3" translatesAutoresizingMaskIntoConstraints="NO" id="7cs-wL-fwS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5U-Vz-SKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372.5" y="-1980.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MAPA_ZOO_final" width="5333" height="5333"/>
+        <image name="icon_camera" width="170" height="170"/>
+        <image name="icon_enable_flash" width="170" height="170"/>
+        <image name="icon_exit_camera" width="170" height="170"/>
+        <image name="icon_pic_selfie" width="170" height="170"/>
+        <image name="leao" width="2793" height="3384"/>
+        <image name="menu_camera" width="750" height="1334"/>
+        <image name="menu_inicial" width="750" height="1334"/>
+        <image name="sticker_avestruz1" width="558" height="442"/>
+        <image name="sticker_avestruz2" width="558" height="442"/>
+        <image name="sticker_avestruz3" width="558" height="442"/>
+        <image name="sticker_leao1" width="606" height="753"/>
+        <image name="sticker_leao2" width="606" height="753"/>
+        <image name="sticker_leao3" width="606" height="753"/>
+        <image name="sticker_macaco1" width="545" height="482"/>
+        <image name="sticker_macaco2" width="545" height="482"/>
+        <image name="sticker_macaco3" width="545" height="482"/>
+        <image name="tutorial1" width="750" height="1334"/>
+        <image name="tutorial2" width="750" height="1334"/>
+        <image name="tutorial3" width="750" height="1334"/>
+        <image name="tutorial4" width="750" height="1334"/>
+    </resources>
+</document>
